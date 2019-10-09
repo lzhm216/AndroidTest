@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_tdt_sl"
+        android:title="天地图矢量">
+    </item>
+    <item android:id="@+id/menu_tdt_yx"
+        android:title="天地图影像">
+    </item>
+    <item android:id="@+id/menu_jygdom"
+        android:title="2018影像">
+    </item>
+    <item android:id="@+id/menu_addfeature"
+        android:title="添加矢量图层">
+    </item>
+    <item android:id="@+id/menu_addimage"
+        android:title="添加业务图层1">
+    </item>
+    <item android:id="@+id/menu_measure" android:title="测量"></item>
+    <item android:id="@+id/menu_quanjing" android:title="全景"></item>
+    <item android:id="@+id/menu_pdfviwer" android:title="pdf"></item>
+    <item android:id="@+id/menu_colorpicker" android:title="颜色选择器"></item>
+    <item android:id="@+id/menu_printscreen" android:title="截屏"></item>
+    <item android:id="@+id/menu_camera" android:title="拍照"></item>
+    <item android:id="@+id/menu_photo" android:title="相册"></item>
+    <item android:id="@+id/menu_identity" android:title="地图查询"></item>
+    <item android:id="@+id/menu_identitys" android:title="地图查询1"></item>
+
+</menu>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.esri.arcgisruntime.mapping.view.MapView>
+
+    <com.gcy.mapapp.view.MapZoomView
+        android:id="@+id/map_zoom_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true">
+    </com.gcy.mapapp.view.MapZoomView>
+
+    <com.gcy.mapapp.view.MapNorthView
+        android:id="@+id/map_north_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="10dp" >
+    </com.gcy.mapapp.view.MapNorthView>
+
+    <com.gcy.mapapp.view.MapRotateView
+        android:id="@+id/map_rotate_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="10dp">
+    </com.gcy.mapapp.view.MapRotateView>
+
+    <com.gcy.mapapp.view.MeasureToolView
+        android:id="@+id/measure_tool"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="10dp">
+
+    </com.gcy.mapapp.view.MeasureToolView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp">
+        <ImageView
+            android:id="@+id/tdt_yx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="1dp"
+            android:background="@drawable/shape_gray_square_bg"
+            android:src="@mipmap/img_c_hdpi">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/tdt_sl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="1dp"
+            android:background="@drawable/shape_gray_square_bg"
+            android:src="@mipmap/vec_c_hdpi">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/jyg_yx"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="1dp"
+            android:background="@drawable/shape_gray_square_bg"
+            android:src="@mipmap/jyg_yx">
+
+        </ImageView>
+    </LinearLayout>
+</RelativeLayout>

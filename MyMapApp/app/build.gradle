@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "21.1.2"
+    defaultConfig {
+        applicationId "com.gcy.mapapp"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src/main/java', 'src/main/java/TianDiTuLayer', 'src/main/java/com/gcy/mymapapp/TianDiTuLayer', 'libs']
+            jniLibs.srcDir 'libs'
+        }
+    }
+}
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.gcy.mapapp.greendao'
+    targetGenDir 'src/main/java'
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.0-beta2'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.esri.arcgisruntime:arcgis-android:100.5.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.okhttp3:okhttp:4.1.0'
+    implementation 'br.com.zbra:android-linq:1.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
+    implementation "com.github.bumptech.glide:recyclerview-integration:4.6.1"
+
+    implementation 'org.greenrobot:greendao:3.2.2' // add library
+    implementation 'org.greenrobot:greendao-generator:3.2.2'
+
+    testImplementation 'junit:junit:4.13-beta-3'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/BaiduLBS_Android.jar')
+
+}

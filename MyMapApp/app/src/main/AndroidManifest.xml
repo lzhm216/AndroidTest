@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.gcy.mapapp">
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 录制声音通过手机或耳机的麦克 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <application
+        android:name=".Activity.Pano.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.Photo.PhotoListActivity"></activity>
+        <activity android:name=".Activity.Photo.PhotoActivity" />
+        <activity android:name=".Activity.Camera2.CameraActivity" android:screenOrientation="sensor" />
+        <activity android:name=".Activity.Pdf.PdfFileList1Activity" />
+        <activity
+            android:name=".Activity.Pdf.PdfFileListActivity"
+            android:label="@string/title_activity_pdf_file_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.Pdf.PdfViewerActivity" />
+        <activity android:name=".MainActivity" android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activity.Pano.PanoDemoActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Activity.Pano.PanoDemoMain"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name=".Activity.Pano.PanoDemoCoordinate"
+            android:screenOrientation="sensor" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="aybCtHvTxveB6AMfYqLUC2mv7i812pm3" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.6.3" />
+            </intent-filter>
+        </service>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+    </application>
+    <meta-data
+        android:name="com.gcy.mapapp"
+        android:value="4acb2987295122aa3f7fae79bf8d3992" /> <!-- 请求访问使用照相设备 -->
+
+</manifest>
