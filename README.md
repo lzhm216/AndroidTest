@@ -1,4 +1,5 @@
 # AndroidTest
+包含一下几个Android项目:
 ## 1 CameraTest 调用谷歌Camera2 Api接口实现拍照测试
 
 ## 2 Glidetest 利用Glide进行图片加载测试
